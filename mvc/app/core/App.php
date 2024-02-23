@@ -24,7 +24,7 @@ class App
             $this->controller = '_404';
         }
        }
-       require'../app/controllers/'.$this->. '.php';
+       require'../app/controllers/'.$this->controller . '.php';
        $this->controller = new $this->controller;
        
        if(isset($url[1]))
@@ -38,7 +38,7 @@ class App
        $this->params = $url ? array_values($url): [];
        call_user_func_array([$this->controller, $this->method], $this->params);
     }
-    private function $spliturl()
+    private function splitUrl()
     {
         if(isset($_Get['url']))
         {
