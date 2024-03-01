@@ -40,9 +40,9 @@ class App
     }
     private function splitUrl()
     {
-        if(isset($_Get['url']))
+        if(isset($_GET['url']))
         {
-            $url = explode("/", trim($_Get['url'], "/"));
+            $url = explode("/", trim($_GET['url'], "/"));
             return $url;
         }
     }
